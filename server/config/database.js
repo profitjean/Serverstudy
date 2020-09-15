@@ -1,11 +1,11 @@
 const mysql = require('promise-mysql');
 
 const connection = {
-    host: '127.0.0.1',
-    port: 3306,
-    user: 'root',
-    password: 'y4121jlee',
-    database: 'yoon'
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    database: 'Ounce'
 }
 
 module.exports = mysql.createPool(connection)
